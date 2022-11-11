@@ -1,0 +1,43 @@
+.navbar{
+    height: 50px;
+    border-bottom: 0.5px solid rgb(231 , 228 , 228);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+.wrapper{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: rebeccapurple; */
+}
+.items{
+    display: flex;
+    align-items: center;
+}
+.item{
+        display: flex;
+            align-items: center;
+}
+.search{
+    display: flex;
+    align-items: center;
+    border: 0.5px solid rgb(8, 8, 8);
+    padding: 3px;
+}
+input{
+ border: none;
+ outline: none;
+ background: transparent;
+}
+input::placeholder{
+    font-size: 12px;
+}
+.avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
