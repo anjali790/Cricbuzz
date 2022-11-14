@@ -1,7 +1,7 @@
 import React from "react";
-import "./Home.css"
-import { Navbar } from "../navbar/Navbar"
-import { Sidebar } from "../sidebar/Sidebar"
+import { Navbar } from "../navbar/Navbar";
+import { Sidebar } from "../sidebar/Sidebar";
+import  "./home.css";
 
 export const Home = () => {
     return (

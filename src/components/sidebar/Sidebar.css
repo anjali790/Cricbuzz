@@ -9,10 +9,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin:5%;
 }
 .logo{
     font-size: 20px;
     font-weight: bold;
+    margin-left:5%;
 }
 hr{
     height: 0;
@@ -41,6 +43,10 @@ li{
 }
 li:hover{
     background-color: #ece8ff;
+}
+.icon{
+    font-size:18px;
+    color:#7451f8
 }
 span{
     font-size: 13px;
