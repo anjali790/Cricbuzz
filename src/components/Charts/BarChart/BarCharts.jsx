@@ -16,7 +16,6 @@ export function BarCharts() {
                 }
             )
             .then(response => {
-                // console.log(response.data.pointsTable[0].pointsTableInfo)
                 setMatches([...response.data.pointsTable[0].pointsTableInfo]);
             })
             .catch(function (error) {
