@@ -1,11 +1,12 @@
 import './App.css';
 import 'antd/dist/antd.css';
-import Layouts from './components/Layouts';
+
+import { Layout } from './components/Layout/Layout';
 
 function App() {
   return (
     <>
-    <Layouts/>
+      <Layout />
     </>
   );
 }
