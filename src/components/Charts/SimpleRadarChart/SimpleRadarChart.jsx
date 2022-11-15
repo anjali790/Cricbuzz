@@ -36,9 +36,7 @@ export function SimpleRadarChart() {
             <PolarAngleAxis dataKey="value[2]" />
             <PolarRadiusAxis />
             <Radar
-                name="Mike"
                 dataKey="value[3]"
-                stroke="#8884d8"
                 fill="#8884d8"
                 fillOpacity={0.6}
             />
