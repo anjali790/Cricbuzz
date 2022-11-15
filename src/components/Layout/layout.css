@@ -1,9 +1,3 @@
-.flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .MuiBox-root .header{
-    background-color: brown;
+    background-color: lightblue;
 }
