@@ -19,7 +19,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
-import { MainData } from '../Main.jsx/MainData';
+import { Dashboard } from '../Dashboard/Dashboard.jsx';
 
 import './layout.css';
 
@@ -181,7 +181,7 @@ export function Layout() {
             </Drawer>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
-                <MainData />
+                <Dashboard />
             </Box>
         </Box>
     );
