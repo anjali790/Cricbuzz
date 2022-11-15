@@ -35,8 +35,17 @@ export function DashboardTable() {
   useEffect(() => {
     axios
       .get(
-        `https://cricbuzz-cricket.p.rapidapi.com/mcenter/v1/35878/team/9`,
+        // `https://cricbuzz-cricket.p.rapidapi.com/mcenter/v1/35878/team/9`,
+        `https://cricbuzz-cricket.p.rapidapi.com/stats/v1/venue/24`,
         {
+          // headers: {
+          //   'X-RapidAPI-Key': 'b07e006b79msh0115f64a28516d4p1c5992jsnceb9253b84c0',
+          //   'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
+          // }
+          // headers: {
+          //   'X-RapidAPI-Key': 'b07e006b79msh0115f64a28516d4p1c5992jsnceb9253b84c0',
+          //   'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
+          // }
           headers: {
             'X-RapidAPI-Key': 'b07e006b79msh0115f64a28516d4p1c5992jsnceb9253b84c0',
             'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
@@ -44,8 +53,9 @@ export function DashboardTable() {
         }
       )
       .then(response => {
+        console.log(response.data)
         // console.log(response.data.players["playing XI"]);
-        setCricbuzzData([...response.data.players["playing XI"]]);
+        setCricbuzzData([...response.data]);
       })
       .catch(function (error) {
         console.error(error);
