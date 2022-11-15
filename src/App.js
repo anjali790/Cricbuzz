@@ -5,7 +5,7 @@ import Layouts from './components/Layouts';
 function App() {
   return (
     <>
-    <Layouts/>
+      <Layouts />
     </>
   );
 }
