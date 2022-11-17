@@ -2,16 +2,16 @@ import { BrowserRouter , Routes , Route } from "react-router-dom"
 
 import { Layout } from "./components/layout/Layout";
 import { Login } from "./components/login/Login";
-import  { useContext } from "react";
-import { DarkModeContext } from "./context/darkModeContext"
+// import  { useContext } from "react";
+// import { DarkModeContext } from "./context/darkModeContext"
 
-import  "./components/style/dark.css"
+// import  "./components/style/dark.css"
 
 function App() {
 
-const { darkMode} = useContext(DarkModeContext)
+// const { darkMode} = useContext(DarkModeContext)
   return (
-    <div className={darkMode ? "app dark" : "app "}>
+    // <div className={darkMode ? "app dark" : "app "}>
     <BrowserRouter>
     <Routes>
       <Route path="/">
@@ -20,7 +20,7 @@ const { darkMode} = useContext(DarkModeContext)
       </Route>
     </Routes>
     </BrowserRouter>
-    </div>
+    // </div>
   );
 }
 
