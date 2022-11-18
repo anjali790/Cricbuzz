@@ -29,7 +29,7 @@ export function Dashboard() {
 
     return (
         <>
-            <Box sx={{ flexGrow:1 }}>
+            <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
                     <Grid item xs={3}>
                         <Item><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, deleniti quas facilis totam veniam molestiae praesentium vitae voluptate quibusdam, maxime cum voluptates magnam dignissimos corporis eligendi aperiam nihil aut reprehenderit. </p></Item>
@@ -71,9 +71,7 @@ export function Dashboard() {
                             </div>
                         ))} */}
                         <SliderComp venue={venue} />
-                        {/* <h1>hello</h1> */}
                     </Grid>
-
                     <Grid item xs={12}>
                         <CricbuzzTable />
                     </Grid>

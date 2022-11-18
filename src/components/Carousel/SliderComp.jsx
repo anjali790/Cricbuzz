@@ -4,7 +4,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
+
 import { Item } from '../Dashboard/ConstData';
+
 import './sliderComp.css';
 
 export function SliderComp({ venue }) {
@@ -33,7 +35,6 @@ export function SliderComp({ venue }) {
                                     <p>{data.about.length > 100 ? `${data.about.substring(0, 75)}...` : data.about}</p>
                                 </div>
                             </div>
-
                         </SwiperSlide>
                     </Item>
                 ))}
