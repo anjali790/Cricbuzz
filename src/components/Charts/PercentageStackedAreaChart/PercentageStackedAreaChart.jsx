@@ -47,7 +47,7 @@ const data = [
 ];
 
 const toPercent = (decimal: number, fixed: number = 0) =>
-    `${(decimal * 100).toFixed(fixed)}%`;
+    `${(decimal * 100).toFixed(0)}%`;
 
 const getPercent = (value: number, total: number) => {
     const ratio = total > 0 ? value / total : 0;

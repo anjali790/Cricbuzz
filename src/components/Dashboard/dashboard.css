@@ -1,3 +1,14 @@
-section{
-    background-color: lightblue;
+h3 {
+    margin: 20px;
+    font-weight: bolder;
+    color: #EE2364;
+}
+
+.flex .venueImg {
+    margin-top: 8px;
+}
+
+.MuiGrid-root .venue_div{
+    display: flex;
+    margin-right: 10px;
 }
