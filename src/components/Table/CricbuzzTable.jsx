@@ -8,7 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-import './cricbuzz.css';
+import './cricbuzztable.css';
 
 export function CricbuzzTable() {
     const [tableData, setTableData] = useState([]);
