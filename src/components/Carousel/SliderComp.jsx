@@ -13,9 +13,9 @@ export function SliderComp({ venue }) {
     return (
         <>
             <Swiper
-                slidesPerView={5}
+                slidesPerView={4}
                 spaceBetween={10}
-                slidesPerGroup={5}
+                slidesPerGroup={4}
                 loop={false}
                 loopFillGroupWithBlank={false}
                 pagination={{
@@ -30,23 +30,18 @@ export function SliderComp({ venue }) {
                         <SwiperSlide>
                             <div className='flex'>
                                 <div>
-                                    <img className='venueImg' height="230px" width="310px" src={data.imgUrl} alt="" />
-                                    <h5>{data.address[0].venue}</h5>
-                                    <p>{data.about.length > 100 ? `${data.about.substring(0, 75)}...` : data.about}</p>
+                                    <img className='venueImg' src={data.imgUrl} alt="" />
+                                    <div className="location">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>{data.address[0].venue}</span>
+                                    </div>
+                                    <p className="venue">{data.address[0].venue}</p>
+                                    <p className="location_detail">{data.about.length > 100 ? `${data.about.substring(0, 70)}...` : data.about}</p>
                                 </div>
                             </div>
                         </SwiperSlide>
                     </Item>
                 ))}
-                {/* <SwiperSlide><h1>hello</h1></SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide> */}
             </Swiper>
         </>
     );

@@ -16,7 +16,6 @@ export function CricbuzzTable() {
     useEffect(() => {
         axios.get('https://frozen-harbor-02472.herokuapp.com/table')
             .then((response) => {
-                // console.log(response.data)
                 setTableData([...response.data]);
             })
             .catch(function (error) {
@@ -45,7 +44,7 @@ export function CricbuzzTable() {
                     {tableData.map((row) => (
                         <TableRow
                             key={row.name}
-                            // sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             <TableCell component="th" scope="row">
                                 <img src={row.imgUrl} alt="" />

@@ -8,10 +8,10 @@ import { BarCharts } from '../Charts/BarChart/BarCharts';
 import { PercentageStackedAreaChart } from '../Charts/PercentageStackedAreaChart/PercentageStackedAreaChart';
 import { SimpleRadarChart } from '../Charts/SimpleRadarChart/SimpleRadarChart';
 import { LineBarAreaComposedChart } from '../Charts/LineBarAreaComposedChart/LineBarAreaComposedChart';
-
-import './dashboard.css';
 import { CricbuzzTable } from '../Table/CricbuzzTable';
 import { SliderComp } from '../Carousel/SliderComp';
+
+import './dashboard.css';
 
 export function Dashboard() {
     const [venue, setVenue] = useState([]);
@@ -57,19 +57,6 @@ export function Dashboard() {
                     </Grid>
                     <h3>HOST CITIES & VENUES</h3>
                     <Grid item xs={12} className="venue_div">
-                        {/* {venue.map((data) => (
-                            <div key={data.id}>
-                                <Item>
-                                    <div className='flex'>
-                                        <div>
-                                            <img className='venueImg' height="230px" width="310px" src={data.imgUrl} alt="" />
-                                            <h5>{data.address[0].venue}</h5>
-                                            <p>{data.about.length > 100 ? `${data.about.substring(0, 75)}...` : data.about}</p>
-                                        </div>
-                                    </div>
-                                </Item>
-                            </div>
-                        ))} */}
                         <SliderComp venue={venue} />
                     </Grid>
                     <Grid item xs={12}>
