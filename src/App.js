@@ -1,12 +1,14 @@
 import './App.css';
-import 'antd/dist/antd.css';
+import { MainData } from './components/Card/Card';
 
-import { Layout } from './components/Layout/Layout';
+// import { Layout } from './components/Layout/Layout';
 
 function App() {
   return (
     <>
-      <Layout />
+      {/* <Layout /> */}
+      {/* <PercentageStackedAreaChart /> */}
+      <MainData />
     </>
   );
 }
