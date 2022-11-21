@@ -7,8 +7,7 @@ import {
   FormControlLabel,
   Checkbox,
 } from "@mui/material";
-// import { useState } from "react"
-// import {  useNavigate } from 'react-router-dom';
+
 
 export const Registration = () => {
   const [error, setError] = useState({
@@ -17,29 +16,38 @@ export const Registration = () => {
     type: "",
   });
 
-  // const navigate = useNavigate();
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const actualData = {
+      name: data.get("name"),
       email: data.get("email"),
       password: data.get("password"),
+      password_confrimation: data.get("password_confrimation")
+
     };
 
-    if (actualData.email && actualData.password) {
+    if (actualData.name && actualData.email && actualData.password && actualData.tc !== null) {
       console.log(actualData);
-      document.getElementById("login-form").reset();
-      setError({
-        status: true,
-        msg: "Registraction successfull",
-        type: "success",
-      });
-      //   navigate('/')
+      if (actualData.password === actualData.password_confrimation) {
+        document.getElementById("registration-form").reset();
+        setError({
+          status: true,
+          msg: "Registraction successfull",
+          type: "success",
+        });
+      } else {
+        setError({
+          status: true,
+          msg: "password and confrim password does not match",
+          type: "error",
+        });
+      }
+
     } else {
       setError({
         status: true,
-        msg: "confrim passowrd dosen't match",
+        msg: "Please ! Fill all input field",
         type: "error",
       });
     }
@@ -90,7 +98,7 @@ export const Registration = () => {
           requried
           fullWidth
           id="password"
-          name="password-confrimation"
+          name="password_confrimation"
           label="Confirm Password"
           type="password"
           sx={{ width: "30vw" }}

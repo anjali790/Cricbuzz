@@ -1,26 +1,26 @@
-import { BrowserRouter , Routes , Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Layout } from "./components/layout/Layout";
 import { Login } from "./components/login/Login";
-// import  { useContext } from "react";
-// import { DarkModeContext } from "./context/darkModeContext"
+import { EmailPasswordReset } from "./components/login/EmailPasswordReset"
+import { ResetPassword} from "./components/login/ResetPassword"
 
-// import  "./components/style/dark.css"
 
 function App() {
-
-// const { darkMode} = useContext(DarkModeContext)
+  
   return (
-    // <div className={darkMode ? "app dark" : "app "}>
+    
     <BrowserRouter>
-    <Routes>
-      <Route path="/">
-        <Route index element={<Layout />}/>
-        <Route path="login" element={<Login/>}/>
-      </Route>
-    </Routes>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Layout />} />
+          <Route path="login" element={<Login />} />
+          <Route path="EmailPasswordReset" element={<EmailPasswordReset/>} />
+           <Route path="ResetPassword" element={<ResetPassword/>} />
+        </Route>
+      </Routes>
     </BrowserRouter>
-    // </div>
+    
   );
 }
 

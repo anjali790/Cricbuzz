@@ -26,9 +26,10 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
+
+
 export const Layout = () => {
   const [mode, setMode] = useState("light");
-  
 
   let Theme = createTheme({
     palette: {
@@ -37,7 +38,6 @@ export const Layout = () => {
   });
 
   const [open, setOpen] = useState(false);
-  
 
   const handleDrawerOpen = () => {
     setOpen(true);

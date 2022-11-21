@@ -5,7 +5,6 @@ import MuiDrawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
-// import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Collapse from "@mui/material/Collapse";
@@ -79,7 +78,7 @@ export const Sidebar = (props) => {
   const handleClick = () => {
     setDown(!down);
   };
-  // const theme = useTheme();
+
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -87,9 +86,9 @@ export const Sidebar = (props) => {
       <Drawer
         variant="permanent"
         open={props.open}
-        onClick={props.handleDrawerClose}
+        
       >
-        <DrawerHeader sx={{ backgroundColor: "#291646", padding: "0 auto" }}>
+        <DrawerHeader sx={{ backgroundColor: "#291646", padding: "0 auto" }} onClick={props.handleDrawerClose}>
           <ChevronLeftIcon sx={{ color: "white", textSize: "20px" }} />
           <Typography
             variant="h4"
@@ -123,15 +122,15 @@ export const Sidebar = (props) => {
             </ListItemIcon>
             <ListItemText primary="DashBoard" />
           </ListItemButton>
-          <ListItemButton>
+          <ListItemButton >
             <ListItemIcon>
-              <TableRowsIcon sx={{ color: "DodgerBlue" }} />
+              <TableRowsIcon sx={{ color: "DodgerBlue" }}  />
             </ListItemIcon>
             <ListItemText primary="Table" />
           </ListItemButton>
           <ListItemButton onClick={handleClick}>
             <ListItemIcon>
-              <BarChartIcon sx={{ color: "DodgerBlue" }} />
+              <BarChartIcon sx={{ color: "DodgerBlue" }}  />
             </ListItemIcon>
             <ListItemText primary="Chart" />
             {down ? <ExpandLess /> : <ExpandMore />}
@@ -175,6 +174,8 @@ export const Sidebar = (props) => {
       </Drawer>
       {/* <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
+        <Dashboard component={NavLink}
+            to="/login" />
       </Box> */}
     </Box>
   );

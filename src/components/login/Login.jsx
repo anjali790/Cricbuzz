@@ -3,8 +3,8 @@ import { Grid, Card, Tabs, Tab, Box, Avatar } from "@mui/material";
 import { UserLogin } from "./UserLogin";
 import { Registration } from "./Registration";
 import { useState } from "react";
-// import { Navbar } from "../navbar/Navbar";
-// import Avatar from "@mui/material/Avatar";
+import { Navbar } from "../navbar/Navbar";
+
 
 const TabPanel = ({ children, value, index }) => {
   return (
@@ -22,16 +22,10 @@ export const Login = (props) => {
   return (
     <>
       <Grid conatiner sx={{ height: "100vh" }}>
-        {/* <Grid item lg={7} sm={5} sx={{ backgroundColor: "#291646" }}>
-        <Navbar />
-          <Avatar
-            sx={{ width: 600, height: 556, marginLeft: 30 }}
-            variant="square"
-            alt="Remy Sharp"
-            src="https://resources.pulse.icc-cricket.com/photo-resources/2022/10/13/037e8b5a-9f7b-4ee9-aa3d-b390aa0d1445/Main-Image-SSO.png?height=1024&width=591"
-          />
-        </Grid> */}
-        <Grid item lg={5} sm={7}>
+        <Grid item lg={7} sm={5} sx={{ backgroundColor: "#291646" }}>
+          <Navbar />
+        </Grid>
+        <Grid item lg={5} sm={7} >
           <Card sx={{ width: "100%", height: "100%" }}>
             <Box>
               <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -64,9 +58,6 @@ export const Login = (props) => {
               </TabPanel>
             </Box>
           </Card>
-        </Grid>
-        <Grid sx={{ backgroundColor: "#291646" }}>
-          {/* <Avatar   sx={{ width: 600, height: 556 , marginLeft:30}}  variant="square" alt="Remy Sharp" src="https://resources.pulse.icc-cricket.com/photo-resources/2022/10/13/037e8b5a-9f7b-4ee9-aa3d-b390aa0d1445/Main-Image-SSO.png?height=1024&width=591" /> */}
         </Grid>
       </Grid>
     </>

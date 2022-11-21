@@ -2,12 +2,14 @@ import { TextField, Button, Box, Alert } from "@mui/material";
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
+
 export const UserLogin = () => {
   const [error, setError] = useState({
     status: false,
     msg: "",
     type: "",
   });
+
 
   const navigate = useNavigate();
 
@@ -48,8 +50,9 @@ export const UserLogin = () => {
           id="email"
           name="email"
           label="Email Address"
-          sx={{ width: "30vw" }}
+          sx={{ m: 1, width: "45ch" }}
         />
+
         <TextField
           margin="normal"
           requried
@@ -69,7 +72,7 @@ export const UserLogin = () => {
             Login
           </Button>
         </Box>
-        <NavLink>Forgot password ?</NavLink>
+        <NavLink to="/EmailPasswordReset" >Forgot password ?</NavLink>
         {error.status ? <Alert severity={error.type}>{error.msg}</Alert> : ""}
       </Box>
     </>
