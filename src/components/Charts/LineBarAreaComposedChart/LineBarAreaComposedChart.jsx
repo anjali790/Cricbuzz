@@ -49,6 +49,7 @@ const data = [
 
 export function LineBarAreaComposedChart() {
     const [matchData, setMatchData] = useState([]);
+    
     useEffect(() => {
         axios
             .get(`https://heisenbug-world-cup-2018-live-scores-v1.p.rapidapi.com/api/worldcup/match/stats`,
