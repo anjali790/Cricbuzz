@@ -20,7 +20,6 @@ export function Dashboard() {
     useEffect(() => {
         axios.get('https://frozen-harbor-02472.herokuapp.com/venue')
             .then((response) => {
-                console.log(response.data)
                 setVenue([...response.data]);
             })
             .catch(function (error) {
