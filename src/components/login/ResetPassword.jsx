@@ -26,13 +26,13 @@ export function ResetPassword() {
         const actualData = {
             oldpassword: data.get("Oldpassword"),
             password: data.get("newpassword"),
-            password_confrimation: data.get("password_confrimation")
+            password_confirmation: data.get("password_confirmation")
 
         };
 
-        if (actualData.oldpassword && actualData.password && actualData.password_confrimation) {
+        if (actualData.oldpassword && actualData.password && actualData.password_confirmation) {
             console.log(actualData);
-            if (actualData.password === actualData.password_confrimation) {
+            if (actualData.password === actualData.password_confirmation) {
                 document.getElementById("registration-form").reset();
                 setError({
                     status: true,
@@ -42,7 +42,7 @@ export function ResetPassword() {
             } else {
                 setError({
                     status: true,
-                    msg: "password and confrim password does not match",
+                    msg: "password and confirm password does not match",
                     type: "error",
                 });
             }
@@ -108,7 +108,7 @@ export function ResetPassword() {
                     requried
                     fullWidth
                     id="password"
-                    name="password_confrimation"
+                    name="password_confirmation"
                     label="Confirm Password"
                     type="password"
                     sx={{ width: "30vw" }}

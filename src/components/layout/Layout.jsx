@@ -39,13 +39,10 @@ export const Layout = () => {
 
   const [open, setOpen] = useState(false);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+  const handleDrawerOpen = () => setOpen(true);
 
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+  const handleDrawerClose = () => setOpen(false);
+
   return (
     <>
       <ThemeProvider theme={Theme}>

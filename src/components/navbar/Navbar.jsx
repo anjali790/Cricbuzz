@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -21,7 +21,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 
 import { NavLink } from "react-router-dom";
-// import  T20Logo from "../../Assets/Image/T20Logo" 
+
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -110,7 +110,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-export const Navbar = (props) => {
+export const Navbar = ({ handle, setMode, mode }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -211,7 +211,7 @@ export const Navbar = (props) => {
             size="large"
             edge="start"
             color="inherit"
-            onClick={props.handle}
+            onClick={handle}
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
@@ -251,7 +251,7 @@ export const Navbar = (props) => {
                 <FormControlLabel
                   control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
                   onClick={() =>
-                    props.setMode(props.mode === "light" ? "dark" : "light")}
+                    setMode(mode === "light" ? "dark" : "light")}
                 />
               </FormGroup>
             </IconButton>

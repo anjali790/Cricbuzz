@@ -23,13 +23,12 @@ export const Registration = () => {
       name: data.get("name"),
       email: data.get("email"),
       password: data.get("password"),
-      password_confrimation: data.get("password_confrimation")
+      password_confirmmation: data.get("password_confirmmation")
 
     };
 
     if (actualData.name && actualData.email && actualData.password && actualData.tc !== null) {
-      console.log(actualData);
-      if (actualData.password === actualData.password_confrimation) {
+      if (actualData.password === actualData.password_confirmmation) {
         document.getElementById("registration-form").reset();
         setError({
           status: true,
@@ -39,7 +38,7 @@ export const Registration = () => {
       } else {
         setError({
           status: true,
-          msg: "password and confrim password does not match",
+          msg: "password and confirm password does not match",
           type: "error",
         });
       }
@@ -98,7 +97,7 @@ export const Registration = () => {
           requried
           fullWidth
           id="password"
-          name="password_confrimation"
+          name="password_confirmmation"
           label="Confirm Password"
           type="password"
           sx={{ width: "30vw" }}

@@ -22,7 +22,6 @@ export const UserLogin = () => {
     };
 
     if (actualData.email && actualData.password) {
-      console.log(actualData);
       document.getElementById("login-form").reset();
       setError({ status: true, msg: "Login success", type: "success" });
       navigate("/");
@@ -50,7 +49,7 @@ export const UserLogin = () => {
           id="email"
           name="email"
           label="Email Address"
-          sx={{ m: 1, width: "45ch" }}
+          sx={{ width: "30vw" }}
         />
 
         <TextField

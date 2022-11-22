@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
@@ -72,7 +72,7 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export const Sidebar = (props) => {
+export const Sidebar = ({ open, handleDrawerClose }) => {
   const [down, setDown] = React.useState(true);
 
   const handleClick = () => {
@@ -85,10 +85,10 @@ export const Sidebar = (props) => {
       <CssBaseline />
       <Drawer
         variant="permanent"
-        open={props.open}
-        
+        open={open}
+
       >
-        <DrawerHeader sx={{ backgroundColor: "#291646", padding: "0 auto" }} onClick={props.handleDrawerClose}>
+        <DrawerHeader sx={{ backgroundColor: "#291646", padding: "0 auto" }} onClick={handleDrawerClose}>
           <ChevronLeftIcon sx={{ color: "white", textSize: "20px" }} />
           <Typography
             variant="h4"
@@ -102,13 +102,6 @@ export const Sidebar = (props) => {
             CricBuzz
           </Typography>
           <ChevronRightIcon sx={{ color: "white", textSize: "20px" }} />
-          {/* <IconButton>
-            {theme.direction === "rtl" ? (
-              <ChevronRightIcon />
-            ) : (
-              <ChevronLeftIcon />
-            )}
-          </IconButton> */}
         </DrawerHeader>
         <Divider />
         <List
@@ -124,13 +117,13 @@ export const Sidebar = (props) => {
           </ListItemButton>
           <ListItemButton >
             <ListItemIcon>
-              <TableRowsIcon sx={{ color: "DodgerBlue" }}  />
+              <TableRowsIcon sx={{ color: "DodgerBlue" }} />
             </ListItemIcon>
             <ListItemText primary="Table" />
           </ListItemButton>
           <ListItemButton onClick={handleClick}>
             <ListItemIcon>
-              <BarChartIcon sx={{ color: "DodgerBlue" }}  />
+              <BarChartIcon sx={{ color: "DodgerBlue" }} />
             </ListItemIcon>
             <ListItemText primary="Chart" />
             {down ? <ExpandLess /> : <ExpandMore />}
@@ -172,11 +165,6 @@ export const Sidebar = (props) => {
           </ListItemButton>
         </List>
       </Drawer>
-      {/* <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <DrawerHeader />
-        <Dashboard component={NavLink}
-            to="/login" />
-      </Box> */}
     </Box>
   );
 };

@@ -29,7 +29,6 @@ export function EmailPasswordReset() {
         };
 
         if (actualData.email) {
-            console.log(actualData);
             document.getElementById("reset-passwordEmail-form").reset();
             setError({
                 status: true,
