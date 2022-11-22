@@ -17,9 +17,6 @@ export function CricbuzzTable() {
         axios.get('https://frozen-harbor-02472.herokuapp.com/table')
             .then((response) => {
                 setTableData([...response.data]);
-            })
-            .catch(function (error) {
-                console.error(error);
             });
     }, []);
 
