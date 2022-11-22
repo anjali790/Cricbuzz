@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import axios from "axios";
+
 import "./Card.css";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -21,7 +22,6 @@ export function MainData() {
     axios
       .get(`https://frozen-harbor-02472.herokuapp.com/series`)
       .then((res) => {
-        console.log(res.data);
         setData([...res.data]);
       });
   }, []);
@@ -31,37 +31,37 @@ export function MainData() {
       <Box sx={{ flexGrow: 1 }} className="Box">
         <Grid container spacing={2} className="grid-1">
           <Grid item xs={12} className="grid-2">
-            {data.map((item) => (
+            {data.map(({imgF, nameF, imgL, nameL, joinLink, date, time, matchNo}) => (
               <Item className="item">
                 <div className="outermost-container">
                   <div className="item-card-1">
                     <div>
                       <img
                         className="team-image-1"
-                        src={item.imgF}
+                        src={imgF}
                         alt="team 1"
                       />
-                      <h5 className="name">{item.nameF}</h5>
+                      <h5 className="name">{nameF}</h5>
                     </div>
                     <p className="versus">v/s</p>
                     <div>
                       <img
                         className="team-image-2"
-                        src={item.imgL}
+                        src={imgL}
                         alt="team 2"
                       />
-                      <h5 className="name">{item.nameL}</h5>
+                      <h5 className="name">{nameL}</h5>
                     </div>
                   </div>
                   <div className="item-card-2">
-                    <h5 className="date">{item.date}</h5>
-                    <h5 className="time">{item.time}</h5>
-                    <a href={item.joinLink} target="_blank" className="link">
+                    <h5 className="date">{date}</h5>
+                    <h5 className="time">{time}</h5>
+                    <a href={joinLink} target="_blank" className="link">
                       Join Now
                     </a>
                   </div>
                 </div>
-                <h3 className="matchNo">{item.matchNo}</h3>
+                <h3 className="matchNo">{matchNo}</h3>
               </Item>
             ))}
           </Grid>
