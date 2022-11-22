@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { styled, ThemeProvider, createTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiAppBar from "@mui/material/AppBar";
-
+import { Outlet } from "react-router-dom"
 import { Navbar } from "../navbar/Navbar";
 import { Sidebar } from "../sidebar/Sidebar";
+
 
 const drawerWidth = 240;
 
@@ -28,14 +29,8 @@ const AppBar = styled(MuiAppBar, {
 
 
 
-export const Layout = () => {
-  const [mode, setMode] = useState("light");
+export const Layout = ({ mode, setMode }) => {
 
-  let Theme = createTheme({
-    palette: {
-      mode: mode,
-    },
-  });
 
   const [open, setOpen] = useState(false);
 
@@ -45,17 +40,20 @@ export const Layout = () => {
 
   return (
     <>
-      <ThemeProvider theme={Theme}>
-        <CssBaseline />
-        <AppBar position="fixed" open={open}>
-          <Navbar handle={handleDrawerOpen} mode={mode} setMode={setMode} />
-        </AppBar>
-        <Sidebar
-          open={open}
-          handleDrawerOpen={handleDrawerOpen}
-          handleDrawerClose={handleDrawerClose}
+
+      <CssBaseline />
+      <AppBar position="fixed" open={open}>
+        <Navbar handle={handleDrawerOpen}
+          mode={mode}
+          setMode={setMode}
         />
-      </ThemeProvider>
+      </AppBar>
+      <Sidebar
+        open={open}
+        handleDrawerOpen={handleDrawerOpen}
+        handleDrawerClose={handleDrawerClose}
+      />
+      <Outlet />
     </>
   );
 };

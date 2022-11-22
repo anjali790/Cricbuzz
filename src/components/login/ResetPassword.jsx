@@ -6,8 +6,10 @@ import {
     Alert,
 } from "@mui/material";
 import Typography from "@mui/material/Typography";
+import Avatar from '@mui/material/Avatar';
+import CssBaseline from "@mui/material/CssBaseline";
 import { useNavigate } from 'react-router-dom';
-import { Navbar } from "../navbar/Navbar";
+
 
 
 
@@ -48,7 +50,7 @@ export function ResetPassword() {
             }
             setTimeout(() => {
 
-                navigate('/login')
+                navigate('/UserLogin')
             }, 3000)
         } else {
             setError({
@@ -60,70 +62,74 @@ export function ResetPassword() {
     };
     return (
         <>
-            <Navbar />
-            <Box
-                component="form"
-                sx={{
-                    margin: "40px",
-                    marginLeft: "30%",
-                    display: " flex",
-                    flexDirection: "column",
-                }}
-                id="registration-form"
-                onSubmit={handleSubmit}
-            >
-                <Typography
-                    variant="h4"
+            <CssBaseline />
+            <Box sx={{ width: "100%", height: "100%" }}>
+                <Box
+                    component="form"
                     sx={{
-                        color: "white",
-                        fontWeight: "bold",
-                        cursor: "pointer",
-                        textAlign: "center",
+                        width: "50vw",
+                        margin: "20px",
+                        marginTop: "10%",
+                        marginLeft: "10%",
+                        display: "flex",
+                        flexDirection: "column"
                     }}
+                    id="registration-form"
+                    onSubmit={handleSubmit}
                 >
-                    Reset Password
-                </Typography>
-                <TextField
-                    margin="normal"
-                    requried
-                    fullWidth
-                    id="password"
-                    name="Oldpassword"
-                    label="Old-password"
-                    type="Oldpassword"
-                    sx={{ width: "30vw" }}
-                />
-                <TextField
-                    margin="normal"
-                    requried
-                    fullWidth
-                    id="password"
-                    name="newpassword"
-                    label="New-password"
-                    type="newpassword"
-                    sx={{ width: "30vw" }}
-                />
-                <TextField
-                    margin="normal"
-                    requried
-                    fullWidth
-                    id="password"
-                    name="password_confirmation"
-                    label="Confirm Password"
-                    type="password"
-                    sx={{ width: "30vw" }}
-                />
-                <Box textAlign="center">
-                    <Button
-                        type="submit"
-                        variant="contained"
-                        sx={{ mt: 3, mb: 2, mr: "400px", px: 5 }}
+                    <Typography
+                        variant="h4"
                     >
-                        Save
-                    </Button>
-                </Box>
+                        Reset Password
+                    </Typography>
+                    <TextField
+                        margin="normal"
+                        requried
+                        fullWidth
+                        id="password"
+                        name="Oldpassword"
+                        label="Old-password"
+                        type="password"
+                        sx={{ width: "30vw" }}
+                    />
+                    <TextField
+                        margin="normal"
+                        requried
+                        fullWidth
+                        id="password"
+                        name="newpassword"
+                        label="New-password"
+                        type="password"
+                        sx={{ width: "30vw" }}
+                    />
+                    <TextField
+                        margin="normal"
+                        requried
+                        fullWidth
+                        id="password"
+                        name="password_confirmation"
+                        label="Confirm Password"
+                        type="password"
+                        sx={{ width: "30vw" }}
+                    />
+                    <Box textAlign="center">
+                        <Button
+                            type="submit"
+                            variant="contained"
+                            sx={{ mt: 3, mb: 2, mr: "400px", px: 5 }}
+                        >
+                            Save
+                        </Button>
+                    </Box>
 
-                {error.status ? <Alert severity={error.type}>{error.msg}</Alert> : ""}
+                    {error.status ? <Alert severity={error.type}>{error.msg}</Alert> : ""}
+                </Box>
+                <Avatar
+                    variant="square"
+                    alt="Image"
+                    src=".\Image\SSO_Background.webp"
+                    sx={{ width: "591px", height: "1024px", position: "absolute", top: "0", left: "51.5%" }}
+                />
             </Box>
         </>
     );
