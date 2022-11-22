@@ -21,9 +21,6 @@ export function Dashboard() {
         axios.get('https://frozen-harbor-02472.herokuapp.com/venue')
             .then((response) => {
                 setVenue([...response.data]);
-            })
-            .catch(function (error) {
-                console.error(error);
             });
     }, []);
 
@@ -63,7 +60,7 @@ export function Dashboard() {
                         <CricbuzzTable />
                     </Grid>
                     <Grid item xs={12}>
-                        <News/>
+                        <News />
                     </Grid>
                 </Grid>
             </Box>
