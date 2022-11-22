@@ -17,9 +17,6 @@ export function SimpleRadarChart() {
             )
             .then(response => {
                 setPct([...response.data.values]);
-            })
-            .catch(function (error) {
-                console.error(error);
             });
     }, []);
 
