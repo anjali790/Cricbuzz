@@ -40,22 +40,22 @@ export function CricbuzzTable() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {tableData.map((row) => (
+                    {tableData.map(({ match, inns, runs, avg, sr, fours, sixes, name, imgUrl }) => (
                         <TableRow
-                            key={row.name}
+                            key={name}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             <TableCell component="th" scope="row">
-                                <img src={row.imgUrl} alt="" />
+                                <img src={imgUrl} alt="" />
                             </TableCell>
-                            <TableCell>{row.name}</TableCell>
-                            <TableCell align="right">{row.match}</TableCell>
-                            <TableCell align="right">{row.inns}</TableCell>
-                            <TableCell align="right">{row.runs}</TableCell>
-                            <TableCell align="right">{row.avg}</TableCell>
-                            <TableCell align="right">{row.sr}</TableCell>
-                            <TableCell align="right">{row.fours}</TableCell>
-                            <TableCell align="right">{row.sixes}</TableCell>
+                            <TableCell>{name}</TableCell>
+                            <TableCell align="right">{match}</TableCell>
+                            <TableCell align="right">{inns}</TableCell>
+                            <TableCell align="right">{runs}</TableCell>
+                            <TableCell align="right">{avg}</TableCell>
+                            <TableCell align="right">{sr}</TableCell>
+                            <TableCell align="right">{fours}</TableCell>
+                            <TableCell align="right">{sixes}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
