@@ -25,18 +25,18 @@ export function SliderComp({ venue }) {
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
             >
-                {venue.map((data) => (
+                {venue.map(({ imgUrl, address, about }) => (
                     <Item>
                         <SwiperSlide>
                             <div className='flex'>
                                 <div>
-                                    <img className='venueImg' src={data.imgUrl} alt="" />
+                                    <img className='venueImg' src={imgUrl} alt="" />
                                     <div className="location">
                                         <i class="fa-solid fa-location-dot"></i>
-                                        <span>{data.address[0].venue}</span>
+                                        <span>{address[0].venue}</span>
                                     </div>
-                                    <p className="venue">{data.address[0].venue}</p>
-                                    <p className="location_detail">{data.about.length > 100 ? `${data.about.substring(0, 70)}...` : data.about}</p>
+                                    <p className="venue">{address[0].venue}</p>
+                                    <p className="location_detail">{about.length > 100 ? `${about.substring(0, 70)}...` : about}</p>
                                 </div>
                             </div>
                         </SwiperSlide>

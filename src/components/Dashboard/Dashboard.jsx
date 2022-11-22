@@ -12,6 +12,7 @@ import { CricbuzzTable } from '../Table/CricbuzzTable';
 import { SliderComp } from '../Carousel/SliderComp';
 
 import './dashboard.css';
+import { News } from '../News/News';
 
 export function Dashboard() {
     const [venue, setVenue] = useState([]);
@@ -61,6 +62,9 @@ export function Dashboard() {
                     </Grid>
                     <Grid item xs={12}>
                         <CricbuzzTable />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <News/>
                     </Grid>
                 </Grid>
             </Box>

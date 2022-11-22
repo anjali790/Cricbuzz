@@ -1,0 +1,30 @@
+.container .cricket_div {
+    display: flex;
+    width: 70vw;
+    margin: 40px auto;
+    text-align: justify;
+    border-bottom: 2px solid black;
+}
+
+.container .cricket_div .cricket_img_div img {
+    width: 500px;
+    height: 300px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.container .cricket_div .cricket_content_div h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container .cricket_div .cricket_content_div p {
+    font-size: 17px;
+    margin-bottom: 110px;
+}
+
+.container .cricket_div .cricket_content_div span .read_more_btn{
+    border: none;
+    background-color: transparent;
+}
