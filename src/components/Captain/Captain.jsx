@@ -19,9 +19,9 @@ const renderTooltipContent = (o) => {
     <div className="customized-tooltip-content">
       <p className="total">{`${label} (Total: ${total})`}</p>
       <ul className="list">
-        {payload.map((entry, index) => (
-          <li key={`item-${index}`} style={{ color: entry.color }}>
-            {`${entry.name}: ${entry.value}`}
+        {payload.map(({color, name, value}, index) => (
+          <li key={`item-${index}`} style={{ color: color }}>
+            {`${name}: ${value}`}
           </li>
         ))}
       </ul>
@@ -36,7 +36,6 @@ export function PercentageStackedAreaChart() {
     axios
       .get(`https://frozen-harbor-02472.herokuapp.com/captains`)
       .then((res) => {
-        console.log(res.data);
         setPlayer([...res.data]);
       });
   }, []);
