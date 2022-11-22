@@ -33,7 +33,6 @@ export function ResetPassword() {
         };
 
         if (actualData.oldpassword && actualData.password && actualData.password_confirmation) {
-            console.log(actualData);
             if (actualData.password === actualData.password_confirmation) {
                 document.getElementById("registration-form").reset();
                 setError({
