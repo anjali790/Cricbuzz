@@ -10,9 +10,9 @@ import { SimpleRadarChart } from '../Charts/SimpleRadarChart/SimpleRadarChart';
 import { LineBarAreaComposedChart } from '../Charts/LineBarAreaComposedChart/LineBarAreaComposedChart';
 import { CricbuzzTable } from '../Table/CricbuzzTable';
 import { SliderComp } from '../Carousel/SliderComp';
+import { News } from '../News/News';
 
 import './dashboard.css';
-import { News } from '../News/News';
 
 export function Dashboard() {
     const [venue, setVenue] = useState([]);
