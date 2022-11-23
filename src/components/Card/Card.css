@@ -1,0 +1,61 @@
+.grid-2 {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(68, 94, 17);
+}
+
+.item {
+    width: 300px;
+}
+
+.css-1633um2-MuiPaper-root {
+    margin: 10px;
+    background-color: #d7c0c0 !important;
+}
+
+.outermost-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-card-1 {
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid grey;
+    width: 50%;
+    padding-top: 40px;
+}
+
+.team-image-1, .team-image-2 {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    margin: 0 10px;
+}
+
+.versus {
+    margin-block-start: 0.5em;
+    color: grey;
+    font-weight: 700;
+}
+
+.name {
+    margin-block-start: 0.2em;
+    color: rgb(78, 78, 78);
+}
+
+.item-card-2 {
+    margin: 0 auto;
+}
+
+.date {
+    color: darkmagenta;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(0, 128, 122);
+    font-weight: 800;
+    font-size: large;
+    cursor: pointer;
+}

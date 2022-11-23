@@ -47,34 +47,34 @@ const data = [
 ];
 
 const toPercent = (decimal: number, fixed: number = 0) =>
-    `${(decimal * 100).toFixed(0)}%`;
+    `${(decimal * 100).toFixed(fixed)}%`;
 
-const getPercent = (value: number, total: number) => {
-    const ratio = total > 0 ? value / total : 0;
+// const getPercent = (value: number, total: number) => {
+//     const ratio = total > 0 ? value / total : 0;
 
-    return toPercent(ratio, 2);
-};
+//     return toPercent(ratio, 2);
+// };
 
-const renderTooltipContent = (o: any) => {
-    const { payload = [], label } = o;
-    const total = payload.reduce(
-        (result: number, entry: any) => result + entry.value,
-        0
-    );
+// const renderTooltipContent = (o: any) => {
+//     const { payload = [], label } = o;
+//     const total = payload.reduce(
+//         (result: number, entry: any) => result + entry.value,
+//         0
+//     );
 
-    return (
-        <div className="customized-tooltip-content">
-            <p className="total">{`${label} (Total: ${total})`}</p>
-            <ul className="list">
-                {payload.map((entry: any, index: number) => (
-                    <li key={`item-${index}`} style={{ color: entry.color }}>
-                        {`${entry.name}: ${entry.value}(${getPercent(entry.value, total)})`}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-};
+//     return (
+//         <div className="customized-tooltip-content">
+//             <p className="total">{`${label} (Total: ${total})`}</p>
+//             <ul className="list">
+//                 {payload.map((entry: any, index: number) => (
+//                     <li key={`item-${index}`} style={{ color: entry.color }}>
+//                         {`${entry.name}: ${entry.value}(${getPercent(entry.value, total)})`}
+//                     </li>
+//                 ))}
+//             </ul>
+//         </div>
+//     );
+// };
 
 export function PercentageStackedAreaChart() {
     return (
