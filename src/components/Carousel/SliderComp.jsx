@@ -32,7 +32,7 @@ export function SliderComp({ venue }) {
                                 <div>
                                     <img className='venueImg' src={imgUrl} alt="" />
                                     <div className="location">
-                                        <i class="fa-solid fa-location-dot"></i>
+                                        <i className="fa-solid fa-location-dot"></i>
                                         <span>{address[0].venue}</span>
                                     </div>
                                     <p className="venue">{address[0].venue}</p>

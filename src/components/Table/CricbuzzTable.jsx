@@ -20,6 +20,8 @@ export function CricbuzzTable() {
             });
     }, []);
 
+    const data = ["MATCHES", "INNS", "RUNS", "AVG", "SR", "FOURS", "SIXES"];
+
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -27,13 +29,9 @@ export function CricbuzzTable() {
                     <TableRow>
                         <TableCell className='player_img'>PLAYER</TableCell>
                         <TableCell className='player_name'>NAME</TableCell>
-                        <TableCell align="right">MATCHES</TableCell>
-                        <TableCell align="right">INNS</TableCell>
-                        <TableCell align="right">RUNS</TableCell>
-                        <TableCell align="right">AVG</TableCell>
-                        <TableCell align="right">SR</TableCell>
-                        <TableCell align="right">4S</TableCell>
-                        <TableCell align="right">6S</TableCell>
+                        {data.map((item) => {
+                            return <TableCell align='right'>{item}</TableCell>;
+                        })}
                     </TableRow>
                 </TableHead>
                 <TableBody>
