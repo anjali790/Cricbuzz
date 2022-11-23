@@ -15,7 +15,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export function MainData() {
+export function Card() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -30,8 +30,8 @@ export function MainData() {
     <>
       <Box sx={{ flexGrow: 1 }} className="Box">
         <Grid container spacing={2} className="grid-1">
-          <Grid item xs={12} className="grid-2">
-            {data.map(({imgF, nameF, imgL, nameL, joinLink, date, time, matchNo}) => (
+          {/* <Grid item xs={12} className="grid-2"> */}
+            {data.map(({ imgF, nameF, imgL, nameL, joinLink, date, time, matchNo }) => (
               <Item className="item">
                 <div className="outermost-container">
                   <div className="item-card-1">
@@ -64,7 +64,7 @@ export function MainData() {
                 <h3 className="matchNo">{matchNo}</h3>
               </Item>
             ))}
-          </Grid>
+          {/* </Grid> */}
         </Grid>
       </Box>
     </>

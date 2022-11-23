@@ -28,7 +28,7 @@ export function SliderComp({ venue }) {
                 {venue.map(({ imgUrl, address, about }) => (
                     <Item>
                         <SwiperSlide>
-                            <div className='flex'>
+                            <div className='flex' key={about}>
                                 <div>
                                     <img className='venueImg' src={imgUrl} alt="" />
                                     <div className="location">

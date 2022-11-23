@@ -26,7 +26,7 @@ export function News() {
                                 <div className='cricket_content_div'>
                                     <h1>{title}</h1>
                                     <span>
-                                        <p>{description.length > 50 ? `${description.substring(0, 200)}...` : description}<button className='read_more_btn'><a href={url}>Read more</a></button></p>
+                                        <p>{description.length > 200 ? `${description.substring(0, 200)}...` : description}<button className='read_more_btn'><a href={url}>Read more</a></button></p>
                                     </span>
                                 </div>
                             </div>

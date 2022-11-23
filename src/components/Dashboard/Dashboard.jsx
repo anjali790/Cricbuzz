@@ -13,6 +13,7 @@ import { SliderComp } from '../Carousel/SliderComp';
 import { News } from '../News/News';
 
 import './dashboard.css';
+import { Card } from '../Card/Card';
 
 export function Dashboard() {
     const [venue, setVenue] = useState([]);
@@ -28,6 +29,9 @@ export function Dashboard() {
         <>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                        <Item><Card/></Item>
+                    </Grid>
                     <Grid item xs={7}>
                         <Item><BarCharts /></Item>
                     </Grid>
@@ -41,9 +45,9 @@ export function Dashboard() {
                         <Item><PercentageStackedAreaChart /></Item>
                     </Grid>
                     <h3>HOST CITIES & VENUES</h3>
-                    <Grid item xs={12} className="venue_div">
+                    {/* <Grid item xs={12} className="venue_div">
                         <SliderComp venue={venue} />
-                    </Grid>
+                    </Grid> */}
                     <Grid item xs={12}>
                         <CricbuzzTable />
                     </Grid>
