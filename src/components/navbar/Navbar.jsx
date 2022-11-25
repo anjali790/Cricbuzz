@@ -22,6 +22,8 @@ import Switch from '@mui/material/Switch';
 
 import { NavLink } from "react-router-dom";
 
+import "./navbar.css"
+
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -121,14 +123,9 @@ export const Navbar = ({ handle, setMode, mode }) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
+  const handleMobileMenuClose = () => { setMobileMoreAnchorEl(null); };
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
-  };
+  const handleMenuClose = () => { setAnchorEl(null); handleMobileMenuClose(); };
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);

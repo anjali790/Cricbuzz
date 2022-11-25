@@ -101,7 +101,7 @@ export function EmailPasswordReset() {
                     variant="square"
                     alt="Image"
                     src=".\Image\SSO_Background.webp"
-                    sx={{ width: "591px", height: "1024px", position: "absolute", top: "0", left: "51.5%" }}
+                    sx={{ width: "17em", height: "100%", position: "absolute", top: "0", left: "72%" }}
                 />
             </Box >
         </>

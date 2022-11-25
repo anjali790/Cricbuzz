@@ -8,6 +8,7 @@ import {
 import Typography from "@mui/material/Typography";
 import Avatar from '@mui/material/Avatar';
 import CssBaseline from "@mui/material/CssBaseline";
+
 import { useNavigate } from 'react-router-dom';
 
 
@@ -127,7 +128,7 @@ export function ResetPassword() {
                     variant="square"
                     alt="Image"
                     src=".\Image\SSO_Background.webp"
-                    sx={{ width: "591px", height: "1024px", position: "absolute", top: "0", left: "51.5%" }}
+                    sx={{ width: "17em", height: "100%", position: "absolute", top: "0", left: "72%" }}
                 />
             </Box>
         </>

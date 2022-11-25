@@ -22,6 +22,7 @@ import StackedBarChartIcon from "@mui/icons-material/StackedBarChart";
 import Typography from "@mui/material/Typography";
 
 import { NavLink } from "react-router-dom";
+import { Dashboard } from "../Dashboard/Dashboard"
 
 const drawerWidth = 240;
 
@@ -75,96 +76,96 @@ const Drawer = styled(MuiDrawer, {
 export const Sidebar = ({ open, handleDrawerClose }) => {
   const [down, setDown] = React.useState(true);
 
-  const handleClick = () => {
-    setDown(!down);
-  };
-
+  const handleClick = () => { setDown(!down); };
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <Drawer
-        variant="permanent"
-        open={open}
+    <>
+      <Box sx={{ display: "flex" }}>
+        <CssBaseline />
+        <Drawer
+          variant="permanent"
+          open={open}
 
-      >
-        <DrawerHeader sx={{ backgroundColor: "#291646", padding: "0 auto" }} onClick={handleDrawerClose}>
-          <ChevronLeftIcon sx={{ color: "white", textSize: "20px" }} />
-          <Typography
-            variant="h4"
-            sx={{
-              color: "white",
-              fontWeight: "bold",
-              cursor: "pointer",
-              textAlign: "center",
-            }}
-          >
-            CricBuzz
-          </Typography>
-          <ChevronRightIcon sx={{ color: "white", textSize: "20px" }} />
-        </DrawerHeader>
-        <Divider />
-        <List
-          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-          component="nav"
-          aria-labelledby="nested-list-subheader"
         >
-          <ListItemButton>
-            <ListItemIcon>
-              <DashboardIcon sx={{ color: "#291646" }} />
-            </ListItemIcon>
-            <ListItemText primary="DashBoard" />
-          </ListItemButton>
-          <ListItemButton >
-            <ListItemIcon>
-              <TableRowsIcon sx={{ color: "DodgerBlue" }} />
-            </ListItemIcon>
-            <ListItemText primary="Table" />
-          </ListItemButton>
-          <ListItemButton onClick={handleClick}>
-            <ListItemIcon>
-              <BarChartIcon sx={{ color: "DodgerBlue" }} />
-            </ListItemIcon>
-            <ListItemText primary="Chart" />
-            {down ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-          <Collapse in={down} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
-                  <TrendingDownIcon sx={{ color: "#3cb371" }} />
-                </ListItemIcon>
-                <ListItemText primary="Trending" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
-                  <StackedBarChartIcon sx={{ color: "#3cb371" }} />
-                </ListItemIcon>
-                <ListItemText primary="StackedBar" />
-              </ListItemButton>
-            </List>
-          </Collapse>
-        </List>
-        <Divider />
-        <List
-          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-          component="nav"
-          aria-labelledby="nested-list-subheader"
-        >
-          <ListItemButton
-            component={NavLink}
-            to="/UserLogin"
-            style={({ isActive }) => {
-              return { backgroundColor: isActive ? "$6d1b7b" : "" };
-            }}
+          <DrawerHeader sx={{ backgroundColor: "#291646", padding: "0 auto" }} onClick={handleDrawerClose}>
+            <ChevronLeftIcon sx={{ color: "white", textSize: "20px" }} />
+            <Typography
+              variant="h4"
+              sx={{
+                color: "white",
+                fontWeight: "bold",
+                cursor: "pointer",
+                textAlign: "center",
+              }}
+            >
+              CricBuzz
+            </Typography>
+            <ChevronRightIcon sx={{ color: "white", textSize: "20px" }} />
+          </DrawerHeader>
+          <Divider />
+          <List
+            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+            component="nav"
+            aria-labelledby="nested-list-subheader"
           >
-            <ListItemIcon>
-              <LogoutIcon sx={{ color: "red" }} />
-            </ListItemIcon>
-            <ListItemText primary="Logout" />
-          </ListItemButton>
-        </List>
-      </Drawer>
-    </Box>
+            <ListItemButton>
+              <ListItemIcon>
+                <DashboardIcon sx={{ color: "#291646" }} />
+              </ListItemIcon>
+              <ListItemText primary="DashBoard" />
+            </ListItemButton>
+            <ListItemButton >
+              <ListItemIcon>
+                <TableRowsIcon sx={{ color: "DodgerBlue" }} />
+              </ListItemIcon>
+              <ListItemText primary="Table" />
+            </ListItemButton>
+            <ListItemButton onClick={handleClick}>
+              <ListItemIcon>
+                <BarChartIcon sx={{ color: "DodgerBlue" }} />
+              </ListItemIcon>
+              <ListItemText primary="Chart" />
+              {down ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+            <Collapse in={down} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>
+                    <TrendingDownIcon sx={{ color: "#3cb371" }} />
+                  </ListItemIcon>
+                  <ListItemText primary="Trending" />
+                </ListItemButton>
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>
+                    <StackedBarChartIcon sx={{ color: "#3cb371" }} />
+                  </ListItemIcon>
+                  <ListItemText primary="StackedBar" />
+                </ListItemButton>
+              </List>
+            </Collapse>
+          </List>
+          <Divider />
+          <List
+            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+            component="nav"
+            aria-labelledby="nested-list-subheader"
+          >
+            <ListItemButton
+              component={NavLink}
+              to="/UserLogin"
+              style={({ isActive }) => {
+                return { backgroundColor: isActive ? "$6d1b7b" : "" };
+              }}
+            >
+              <ListItemIcon>
+                <LogoutIcon sx={{ color: "red" }} />
+              </ListItemIcon>
+              <ListItemText primary="Logout" />
+            </ListItemButton>
+          </List>
+        </Drawer>
+      </Box>
+      <Dashboard />
+    </>
   );
 };
