@@ -30,7 +30,7 @@ export function Card() {
     <>
       <Box sx={{ flexGrow: 1 }} className="Box">
         <Grid container spacing={2} className="grid-1">
-          {/* <Grid item xs={12} className="grid-2"> */}
+          <Grid item xs={12} className="grid-2">
             {data.map(({ imgF, nameF, imgL, nameL, joinLink, date, time, matchNo }) => (
               <Item className="item">
                 <div className="outermost-container">
@@ -64,7 +64,7 @@ export function Card() {
                 <h3 className="matchNo">{matchNo}</h3>
               </Item>
             ))}
-          {/* </Grid> */}
+          </Grid>
         </Grid>
       </Box>
     </>

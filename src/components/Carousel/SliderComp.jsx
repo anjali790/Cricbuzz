@@ -30,7 +30,7 @@ export function SliderComp({ venue }) {
                         <SwiperSlide>
                             <div className='flex' key={about}>
                                 <div>
-                                    <img className='venueImg' src={imgUrl} alt="" />
+                                    <img height="230px" width="310px" className='venueImg' src={imgUrl} alt="" />
                                     <div className="location">
                                         <i className="fa-solid fa-location-dot"></i>
                                         <span>{address[0].venue}</span>

@@ -28,9 +28,9 @@ export function Dashboard() {
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} >
                     <Grid item xs={12}>
-                        <Item><Card/></Item>
+                        <Card />
                     </Grid>
                     <Grid item xs={7}>
                         <Item><BarCharts /></Item>
@@ -44,10 +44,10 @@ export function Dashboard() {
                     <Grid item xs={6}>
                         <Item><PercentageStackedAreaChart /></Item>
                     </Grid>
-                    <h3>HOST CITIES & VENUES</h3>
-                    {/* <Grid item xs={12} className="venue_div">
+                    {/* <h3>HOST CITIES & VENUES</h3> */}
+                    <Grid item xs={3} className="venue_div">
                         <SliderComp venue={venue} />
-                    </Grid> */}
+                    </Grid>
                     <Grid item xs={12}>
                         <CricbuzzTable />
                     </Grid>

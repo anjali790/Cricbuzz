@@ -19,7 +19,7 @@ const renderTooltipContent = (o) => {
     <div className="customized-tooltip-content">
       <p className="total">{`${label} (Total: ${total})`}</p>
       <ul className="list">
-        {payload.map(({color, name, value}, index) => (
+        {payload.map(({ color, name, value }, index) => (
           <li key={`item-${index}`} style={{ color: color }}>
             {`${name}: ${value}`}
           </li>

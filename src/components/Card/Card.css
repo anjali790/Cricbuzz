@@ -1,17 +1,28 @@
 .grid-2 {
     display: flex;
-    justify-content: center;
-    background-color: rgb(68, 94, 17);
+    align-items: center;
+    justify-content: space-between;
 }
 
 .item {
-    width: 300px;
+    width: 330px;
 }
 
-.css-1633um2-MuiPaper-root {
-    margin: 10px;
-    /* background-color:  #10044a !important; */
+/* .MuiPaper-elevation{
+    background-color: #dad5c0 !important;
+} */
+
+.MuiPaper-elevation{
+    background-color: #252C40 !important;
 }
+
+.MuiBox-root{
+    background-color: #141A2D;
+}
+
+/* .MuiBox-root{
+    background-color: #EEF1F7;
+} */
 
 .outermost-container {
     display: flex;
@@ -26,7 +37,8 @@
     padding-top: 40px;
 }
 
-.team-image-1, .team-image-2 {
+.team-image-1,
+.team-image-2 {
     border-radius: 50%;
     height: 2rem;
     width: 2rem;
