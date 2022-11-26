@@ -92,8 +92,12 @@ export function PercentageStackedAreaChart() {
         >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="month" />
-            <YAxis tickFormatter={toPercent} />
-            <Tooltip content={renderTooltipContent} />
+            <YAxis
+            // tickFormatter={toPercent} 
+            />
+            <Tooltip
+            // content={renderTooltipContent}
+            />
             <Area
                 type="monotone"
                 dataKey="a"

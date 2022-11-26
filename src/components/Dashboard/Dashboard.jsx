@@ -19,7 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-export function MainData() {
+export function Dashboard() {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
